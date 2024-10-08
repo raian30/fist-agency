@@ -4,8 +4,8 @@ import { cn } from "@/lib/utils";
 import { useEffect, useState, useRef } from "react";
 
 export default function GridBackground() {
-    const [mousePosition, setMousePosition] = useState({ x: window.innerWidth / 2, y: window.innerHeight / 2 });
-    const targetPosition = useRef({ x: window.innerWidth / 2, y: window.innerHeight / 2 });
+    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+    const targetPosition = useRef({ x: 0, y: 0 });
 
     useEffect(() => {
 
