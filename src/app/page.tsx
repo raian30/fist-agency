@@ -18,7 +18,7 @@ export default function Home() {
               <h1 className={'text-8xl leading-[1.4] font-medium '}>We Don&apos;t Build Pretty Sites,<br/> We Build Winners.
               </h1>
               <Link href={'/#contact'} className={'flex relative overflow-hidden group justify-center items-center gap-5 w-fit px-7 py-3.5 border border-white rounded-full'}>
-                  <p className={'text-lg  group-hover:text-background transition-all'}>Let's begin</p>
+                  <p className={'text-lg  group-hover:text-background transition-all'}>Let&apos;s begin</p>
                   <ChevronRight size={30} className={'p-1.5 rounded-full bg-white text-black'}/>
                   <div className={'absolute size-7 p-1.5 bg-transparent right-5 [z-index:-1] rounded-full group-hover:right-0 group-hover:bg-white group-hover:size-52 transition-all duration-300'}/>
               </Link>
