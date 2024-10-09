@@ -4,7 +4,7 @@ import { GeistSans } from 'geist/font/sans';
 import Navbar from "@/components/custom/Navbar";
 
 export const metadata: Metadata = {
-  title: "Fist Agency",
+  title: "Fist Agency | Making a Strong Digital Impact",
   description: "Modern digital agency.",
 };
 
