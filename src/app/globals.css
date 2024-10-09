@@ -6,6 +6,61 @@ body {
   font-weight: 300;
 }
 
+
+.animation-item-1 {
+  animation: animation-item-1 infinite 3s ease;
+}
+
+@keyframes animation-item-1 {
+  33% {
+    transform: translateY(100%);
+  }
+
+  66% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.animation-item-2 {
+  animation: animation-item-2 infinite 3s ease;
+}
+
+@keyframes animation-item-2 {
+  33% {
+    transform: translateY(0%);
+  }
+
+  66% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.animation-item-3 {
+  animation: animation-item-3 infinite 3s ease;
+}
+
+@keyframes animation-item-3 {
+  33% {
+    transform: translateY(100%);
+  }
+
+  66% {
+    transform: translateY(0%);
+  }
+
+  100% {
+    transform: translateY(100%);
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
