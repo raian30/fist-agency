@@ -15,7 +15,7 @@ export default function Home() {
                       <p className={'text-xl font-medium absolute top-0 left-0 translate-y-full animation-item-3'}>No bull$hit</p>
                   </div>
               </div>
-              <h1 className={'text-8xl leading-[1.4] font-medium '}>We Don’t Build Pretty Sites,<br/> We Build Winners.
+              <h1 className={'text-8xl leading-[1.4] font-medium '}>We Don&apos;t Build Pretty Sites,<br/> We Build Winners.
               </h1>
               <Link href={'/#contact'} className={'flex relative overflow-hidden group justify-center items-center gap-5 w-fit px-7 py-3.5 border border-white rounded-full'}>
                   <p className={'text-lg  group-hover:text-background transition-all'}>Let's begin</p>
