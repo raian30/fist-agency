@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { GeistSans } from 'geist/font/sans';
 import Navbar from "@/components/custom/Navbar";
+import Cursor from "@/components/custom/Cursor";
 
 export const metadata: Metadata = {
   title: "Fist Agency | Making a Strong Digital Impact",
@@ -16,8 +17,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${GeistSans.className} antialiased text-white bg-background`}
+        className={`${GeistSans.className} antialiased text-white bg-background overflow-x-hidden`}
       >
+        <Cursor/>
         <Navbar/>
         {children}
       </body>

@@ -24,7 +24,9 @@ export default function Home() {
               </Link>
           </div>
           <GridBackground/>
-          <div></div>
+          <div>
+              <h1>Soon</h1>
+          </div>
       </div>
   );
 }
