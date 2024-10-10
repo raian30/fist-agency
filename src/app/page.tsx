@@ -24,22 +24,6 @@ export default function Home() {
               </Link>
           </div>
           <GridBackground/>
-          <div><h1>Pole</h1></div>
-          <div><h1>Pole</h1></div>
-          <div><h1>Pole</h1></div>
-          <div><h1>Pole</h1></div>
-          <div><h1>Pole</h1></div>
-          <div><h1>Pole</h1></div>
-          <div><h1>Pole</h1></div>
-          <div><h1>Pole</h1></div>
-          <div><h1>Pole</h1></div>
-          <div><h1>Pole</h1></div>
-          <div><h1>Pole</h1></div>
-          <div><h1>Pole</h1></div>
-          <div><h1>Pole</h1></div>
-          <div><h1>Pole</h1></div>
-          <div><h1>Pole</h1></div>
-          <div><h1>Pole</h1></div>
       </div>
   );
 }
