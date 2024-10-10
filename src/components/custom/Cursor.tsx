@@ -1,69 +1,78 @@
 'use client'
 
-import {useEffect, useRef} from "react";
-import {gsap} from "gsap";
+import { useEffect, useRef, useState } from "react";
+import { gsap } from "gsap";
+
 export default function Cursor() {
-    const cursorOutline = useRef<HTMLDivElement>(null);
-    const cursorDot = useRef<HTMLDivElement>(null);
+    const cursorOutlineRef = useRef<HTMLDivElement>(null);
+    const cursorDotRef = useRef<HTMLDivElement>(null);
+    const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
-        const links = document.querySelectorAll("a");
-
         const onMouseMove = (e: MouseEvent) => {
-            gsap.to('#cursor-outline', {
+            const { clientX, clientY } = e;
+
+            gsap.to(cursorOutlineRef.current, {
                 duration: 1.5,
-                x: e.pageX-25,
-                y: e.pageY-25,
-                ease: 'expo'
-            })
+                x: clientX - 25,
+                y: clientY - 25,
+                ease: 'expo.out'
+            });
 
-            if (cursorDot.current) {
-                cursorDot.current.style.top = `${e.pageY-10}px`;
-                cursorDot.current.style.left = `${e.pageX-10}px`;
-            }
+            gsap.to(cursorDotRef.current, {
+                duration: 0.1,
+                x: clientX - 10,
+                y: clientY - 10,
+                ease: 'expo.out'
+            });
 
-            if(e.pageX !== 0 && e.pageY !== 0 && cursorDot.current && cursorOutline.current) {
-                cursorDot.current.style.opacity = '1'
-                cursorOutline.current.style.opacity = '1'
-            }
-        }
+            setIsVisible(true);
+        };
 
         const onMouseEnterLink = () => {
-            gsap.to('#custom-cursor', {scale: 4})
-            gsap.to('#cursor-outline', {scale: 1.7})
-        }
+            gsap.to(cursorDotRef.current, { scale: 4 });
+            gsap.to(cursorOutlineRef.current, { scale: 1.7 });
+        };
 
         const onMouseLeaveLink = () => {
-            gsap.to('#custom-cursor', {scale: 1})
-            gsap.to('#cursor-outline', {scale: 1})
-        }
+            gsap.to(cursorDotRef.current, { scale: 1 });
+            gsap.to(cursorOutlineRef.current, { scale: 1 });
+        };
 
-        window.addEventListener('mousemove', onMouseMove)
+        const onMouseLeave = () => setIsVisible(false);
+        const onMouseEnter = () => setIsVisible(true);
+
+        document.addEventListener('mousemove', onMouseMove);
+        document.addEventListener('mouseleave', onMouseLeave);
+        document.addEventListener('mouseenter', onMouseEnter);
+
+        const links = document.querySelectorAll('a');
         links.forEach(link => {
-            link.addEventListener("mouseenter", onMouseEnterLink)
-            link.addEventListener("mouseleave", onMouseLeaveLink)
-        })
+            link.addEventListener('mouseenter', onMouseEnterLink);
+            link.addEventListener('mouseleave', onMouseLeaveLink);
+        });
 
-        document.addEventListener("mouseleave", () => {
-            if (cursorOutline.current && cursorDot.current) {
-                cursorOutline.current.style.opacity = '0'
-                cursorDot.current.style.opacity = '0'
-            }
-        })
-
-        document.addEventListener("mouseenter", () => {
-            if (cursorOutline.current && cursorDot.current) {
-                cursorOutline.current.style.opacity = '1'
-                cursorDot.current.style.opacity = '1'
-            }
-        })
-
+        return () => {
+            document.removeEventListener('mousemove', onMouseMove);
+            document.removeEventListener('mouseleave', onMouseLeave);
+            document.removeEventListener('mouseenter', onMouseEnter);
+            links.forEach(link => {
+                link.removeEventListener('mouseenter', onMouseEnterLink);
+                link.removeEventListener('mouseleave', onMouseLeaveLink);
+            });
+        };
     }, []);
 
     return (
         <>
-            <div ref={cursorOutline} style={{opacity: 0}} id={'cursor-outline'} className="cursor"/>
-            <div ref={cursorDot} style={{opacity: 0}} id={'custom-cursor'} className="custom-cursor" />
+            <div
+                ref={cursorOutlineRef}
+                id={'cursor-outline'} className={`cursor ${isVisible ? 'opacity-100' : 'opacity-0'}`}
+            />
+            <div
+                ref={cursorDotRef}
+                id={'custom-cursor'} className={`custom-cursor ${isVisible ? 'opacity-100' : 'opacity-0'}`}
+            />
         </>
-    )
+    );
 }

@@ -14,7 +14,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
+
+    return (
     <html lang="en">
       <body
         className={`${GeistSans.className} antialiased text-white bg-background overflow-x-hidden`}

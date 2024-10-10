@@ -32,7 +32,7 @@ body {
   height: 50px;
   border: 2px solid whitesmoke;
   border-radius: 50%;
-  position: absolute;
+  position: fixed;
   z-index: 100000;
   box-sizing: border-box;
   transition: opacity 0.25s ease;
