@@ -40,6 +40,12 @@ body {
   pointer-events: none;
 }
 
+@keyframes infinite-scroll {
+  100% {
+    transform: translate(calc(-50% - 8rem));
+  }
+}
+
 .animation-item-1 {
   animation: animation-item-1 infinite 3s ease;
 }
