@@ -43,7 +43,7 @@ export default function Home() {
                       <div className={'flex flex-col gap-10'}>
                           <h1 className={'text-6xl leading-normal'}>Clearing your mind with fresh ideas</h1>
                           <p className={'text-lg opacity-40'}>Personalized expert advice on web design, development and
-                              strategies to optimize online presence, tailored to meet your clients' business goals.</p>
+                              strategies to optimize online presence, tailored to meet your clients&apos; business goals.</p>
                           <div className={'h-0.5 w-full bg-white opacity-20'}/>
                       </div>
                   </div>
