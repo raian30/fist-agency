@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-weight: 300;
-}
-
 * {
   cursor: none !important;
 }

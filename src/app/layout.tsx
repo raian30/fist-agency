@@ -18,7 +18,7 @@ export default function RootLayout({
     return (
     <html lang="en">
       <body
-        className={`${GeistSans.className} antialiased text-white bg-background overflow-x-hidden`}
+        className={`${GeistSans.className} antialiased text-white bg-background overflow-x-hidden font-[300]`}
       >
         <Cursor/>
         <Navbar/>
