@@ -3,7 +3,12 @@
 @tailwind utilities;
 
 * {
-  cursor: none !important;
+    cursor: none !important;
+}
+
+
+html {
+  scroll-behavior: smooth;
 }
 
 .custom-cursor {
@@ -34,6 +39,15 @@
   transition: opacity 0.25s ease;
   backdrop-filter: grayscale(1);
   pointer-events: none;
+}
+
+@media (max-width: 1024px) {
+  .cursor {
+    display: none !important;
+  }
+  .custom-cursor {
+    display: none !important;
+  }
 }
 
 @keyframes infinite-scroll {
