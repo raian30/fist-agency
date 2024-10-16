@@ -3,6 +3,7 @@ import {ChevronRight} from "lucide-react";
 import GridBackground from "@/components/custom/GridBackground";
 
 export default function Hero() {
+
     return (
         <>
             <section id={'home'} className={'flex flex-col gap-20 lg:gap-14 min-h-screen justify-center px-5 md:px-10 lg:px-24'}>

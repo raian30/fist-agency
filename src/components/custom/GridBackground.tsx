@@ -6,39 +6,21 @@ import { useEffect, useState, useRef } from "react";
 export default function GridBackground() {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
     const targetPosition = useRef({ x: 0, y: 0 });
-
-    let dynamicStyle = {
+    const dynamicStyle = {
         maskImage: `radial-gradient(
-            300px circle at ${mousePosition.x}px ${mousePosition.y}px,
+            ${mousePosition.x === 0 && mousePosition.y === 0 ? '0px' : '300px'} circle at ${mousePosition.x}px ${mousePosition.y}px,
             rgba(255, 255, 255, 0.5),
             transparent
         )`,
         WebkitMaskImage: `radial-gradient(
-            300px circle at ${mousePosition.x}px ${mousePosition.y}px,
+            ${mousePosition.x === 0 && mousePosition.y === 0 ? '0px' : '300px'} circle at ${mousePosition.x}px ${mousePosition.y}px,
             rgba(255, 255, 255, 0.5),
             transparent
         )`,
         background: `rgba(0, 187, 191, 0.2)`,
-    };
-
-    if(mousePosition.x === 0 && mousePosition.y === 0) {
-        dynamicStyle = {
-            maskImage: `radial-gradient(
-            0px circle at ${mousePosition.x}px ${mousePosition.y}px,
-            rgba(255, 255, 255, 0.5),
-            transparent
-        )`,
-            WebkitMaskImage: `radial-gradient(
-            0px circle at ${mousePosition.x}px ${mousePosition.y}px,
-            rgba(255, 255, 255, 0.5),
-            transparent
-        )`,
-            background: `rgba(0, 187, 191, 0.2)`,
-        };
     }
 
     useEffect(() => {
-
         const handleMouseMove = (e: MouseEvent) => {
             targetPosition.current = { x: e.clientX, y: e.clientY };
         };
@@ -59,51 +41,28 @@ export default function GridBackground() {
 
         followCursor();
 
-        if(window.innerWidth <= 1024) {
-            console.log('yes')
-
-            dynamicStyle = {
-                maskImage: `radial-gradient(
-            300px circle at 100vw -100vh,
-            rgba(255, 255, 255, 0.5),
-            transparent
-        )`,
-                WebkitMaskImage: `radial-gradient(
-            300px circle at 100vw -100vh,
-            rgba(255, 255, 255, 0.5),
-            transparent
-        )`,
-                background: `rgba(0, 187, 191, 0.2)`,
-            };
-        }
-
         return () => {
             window.removeEventListener("mousemove", handleMouseMove);
         };
     }, []);
 
-    if(window.innerWidth <= 1024) {
-        console.log('yes')
-
-        dynamicStyle = {
-            maskImage: `radial-gradient(
-            300px circle at 100% 50%,
-            rgba(255, 255, 255, 0.4),
-            transparent
-        )`,
-            WebkitMaskImage: `radial-gradient(
-            300px circle at 100% 50%,
-            rgba(255, 255, 255, 0.4),
-            transparent
-        )`,
-            background: `rgba(0, 187, 191, 0.2)`,
-        };
-    }
-
 
     return (
         <div className="absolute top-0 lg:top-3 -z-10 flex h-full w-full flex-col items-center justify-center overflow-hidden rounded-[50px] lg:rounded-[70px] xl:rounded-[80px] bg-[#121212]">
-            <GridPattern className={cn("h-[200%]")} style={dynamicStyle}/>
+            <GridPattern className={cn("h-[200%] hidden lg:block")} style={dynamicStyle}/>
+            <GridPattern className={cn("h-[200%] block lg:hidden")} style={{
+                maskImage: `radial-gradient(
+            '300px' circle at 100% 50%,
+            rgba(255, 255, 255, 0.5),
+            transparent
+        )`,
+                WebkitMaskImage: `radial-gradient(
+            300px circle at 100% 50%,
+            rgba(255, 255, 255, 0.5),
+            transparent
+        )`,
+                background: `rgba(0, 187, 191, 0.2)`,
+            }}/>
         </div>
     );
 }
