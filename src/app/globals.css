@@ -41,6 +41,28 @@ html {
   pointer-events: none;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #525252;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  cursor: n-resize;
+}
+
+::-moz-selection {
+  color: #fff;
+  background: #525252;
+}
+
+::selection {
+  color: #fff;
+  background: #525252;
+}
+
 @media (max-width: 1024px) {
   .cursor {
     display: none !important;
