@@ -1,10 +1,10 @@
 'use client'
 import Image from "next/image";
-import {ChevronRight, ExternalLink} from "lucide-react";
+import {ChevronRight} from "lucide-react";
 import Link from "next/link";
 import { gsap } from "gsap";
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
-import {useEffect, useRef, useState} from "react";
+import {useEffect, useRef} from "react";
 
 export default function Creations() {
     const triggerRef = useRef<HTMLDivElement>(null);
