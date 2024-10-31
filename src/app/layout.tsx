@@ -6,7 +6,7 @@ import Cursor from "@/components/custom/Cursor";
 
 export const metadata: Metadata = {
   title: "Fist Agency | Making a Strong Digital Impact",
-  description: "Fist, a no-nonsense digital agency offering Web development, UX/UI design, Search engine optimization (SEO), Conversion rate optimisation (CRO), and consultations. Driven by innovation, built on dedication.",
+  description: "Fist Agency, a no-nonsense digital agency offering Web development, UX/UI design, Search engine optimization (SEO), Conversion rate optimisation (CRO), and consultations. Driven by innovation, built on dedication.",
 };
 
 export default function RootLayout({
