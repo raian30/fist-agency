@@ -39,7 +39,7 @@ export default function Services() {
                     </div>
                 </div>
             </section>
-        <div className={'w-full h-[80px] bg-background rounded-b-[80px] relative'}>
+        <div className={'w-full h-[80px] bg-background rounded-b-[50px] lg:rounded-b-[70px] xl:rounded-b-[80px] relative'}>
             <div className={'w-full h-[80px] bg-[#121212] absolute -z-10'}/>
         </div>
         </>

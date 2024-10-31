@@ -22,7 +22,7 @@ export default function Hero() {
                 <h1 className={'text-5xl xl:text-8xl leading-[1.4] font-medium '}>We Don&apos;t Build Pretty Sites,<br/> We Build
                     Winners.
                 </h1>
-                <Link href={'/#contact'}
+                <Link target={'_blank'} href={'https://cal.com/fist.agency/30min'}
                       className={'flex relative overflow-hidden group justify-center items-center gap-5 w-fit px-7 py-3.5 border border-white rounded-full'}>
                     <p className={'text-lg group-hover:text-background transition-all'}>Let&apos;s begin</p>
                     <ChevronRight size={30} className={'p-1.5 rounded-full bg-white text-black'}/>

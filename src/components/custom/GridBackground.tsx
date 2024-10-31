@@ -48,7 +48,7 @@ export default function GridBackground() {
 
 
     return (
-        <div className="absolute top-0 lg:top-3 -z-10 flex h-full w-full flex-col items-center justify-center overflow-hidden rounded-[50px] lg:rounded-[70px] xl:rounded-[80px] bg-[#121212]">
+        <div className="absolute top-0 lg:top-3 -z-10 flex h-full w-full flex-col items-center justify-center overflow-hidden rounded-b-[50px] lg:rounded-[70px] xl:rounded-[80px] bg-[#121212]">
             <GridPattern className={cn("h-[200%] hidden lg:block")} style={dynamicStyle}/>
             <GridPattern className={cn("h-[200%] block lg:hidden")} style={{
                 maskImage: `radial-gradient(

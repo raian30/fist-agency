@@ -13,7 +13,7 @@ export default function Navbar() {
                 <Link href={'/#services'}>Services</Link>
                 <Link href={'/#contact'}>Contact</Link>
             </div>
-            <Link href={'/#book-a-call'} className={'bg-blue text-black font-medium px-7 py-3 rounded-full'}>Book a call</Link>
+            <Link target={'_blank'} href={'https://cal.com/fist.agency/30min'} className={'bg-blue text-black font-medium px-7 py-3 rounded-full'}>Book a call</Link>
         </div>
     )
 }

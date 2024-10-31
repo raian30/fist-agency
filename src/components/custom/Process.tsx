@@ -37,7 +37,7 @@ export default function Process() {
     return (
         <>
             <section className={'px-5 md:px-10 lg:px-24 overflow-x-hidden'} id={'Trigger1'}>
-                <div ref={triggerRef}>
+                <div className={'will-change-transform'} ref={triggerRef}>
                     <div className={'flex gap-12 lg:gap-28 w-fit flex-nowrap overflow-x-hidden'}>
                         <div className={'h-fit max-w-[90vw] flex flex-col gap-12'}>
                             <div className={'flex gap-12 items-center'}>
