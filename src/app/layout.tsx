@@ -3,6 +3,7 @@ import "./globals.css";
 import { GeistSans } from 'geist/font/sans';
 import Navbar from "@/components/custom/Navbar";
 import Cursor from "@/components/custom/Cursor";
+import Footer from "@/components/custom/Footer";
 
 export const metadata: Metadata = {
   title: "Fist Agency | Making a Strong Digital Impact",
@@ -23,6 +24,7 @@ export default function RootLayout({
         <Cursor/>
         <Navbar/>
         {children}
+        <Footer/>
       </body>
     </html>
   );

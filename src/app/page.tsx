@@ -4,7 +4,6 @@ import Creations from "@/components/custom/Creations";
 import Services from "@/components/custom/Services";
 import Hero from "@/components/custom/Hero";
 import FooterCTA from "@/components/custom/Cta-footer";
-import Footer from "@/components/custom/Footer";
 export default function Home() {
   return (
       <>
@@ -14,7 +13,6 @@ export default function Home() {
           <Creations/>
           <Services/>
           <FooterCTA/>
-          <Footer/>
       </>
   );
 }

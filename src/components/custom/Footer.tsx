@@ -22,14 +22,12 @@ export default function Footer() {
                         </div>
                         <div className={'flex flex-col lg:flex-row gap-12'}>
                             <p className={'text-lg'}>Copyright 2024 Fist Agency LLC</p>
-                            <p className={'text-lg'}>Terms of Service</p>
-                            <p className={'text-lg'}>Privacy Policy</p>
+                            <a href={'/privacy-policy'} className={'text-lg'}>Privacy Policy</a>
                         </div>
                     </div>
                     <div className={'flex flex-col gap-4'}>
                         <p className={'text-lg'}>Fist Agency LLC</p>
                         <p className={'text-lg'}>30 N Gould St Ste R Sheridan, WY 82801, USA</p>
-                        {/*<Link href={'tel:+13072716878'} className={'text-lg'}>+1 (307) 271-6878</Link>*/}
                         <Link href={'mailto:hello@fist.agency'} className={'text-lg'}>hello@fist.agency</Link>
                     </div>
                 </div>
