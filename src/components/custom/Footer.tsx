@@ -21,7 +21,7 @@ export default function Footer() {
                             <Link href={'/#contact'} className={'text-lg'}>Contact</Link>
                         </div>
                         <div className={'flex flex-col lg:flex-row gap-12'}>
-                            <p className={'text-lg'}>Copyright 2024 Fist Agency LLC</p>
+                            <p className={'text-lg'}>Copyright 2025 Fist Agency LLC</p>
                             <a href={'/privacy-policy'} className={'text-lg'}>Privacy Policy</a>
                         </div>
                     </div>
